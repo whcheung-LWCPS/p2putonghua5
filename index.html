@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #fb0007; -webkit-text-stroke: #fb0007}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0f7001; -webkit-text-stroke: #0f7001}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #900112; -webkit-text-stroke: #900112}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000; min-height: 16.0px}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #900112; -webkit-text-stroke: #900112; min-height: 16.0px}
+    span.s1 {font-kerning: none; background-color: #fffffe}
+    span.s2 {font-kerning: none; color: #fb0007; background-color: #fffffe; -webkit-text-stroke: 0px #fb0007}
+    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #fffffe; -webkit-text-stroke: 0px #2a2a2a}
+    span.s4 {font-kerning: none; color: #6b0001; background-color: #fffffe; -webkit-text-stroke: 0px #6b0001}
+    span.s5 {font-kerning: none; color: #000000; background-color: #fffffe; -webkit-text-stroke: 0px #000000}
+    span.s6 {font-kerning: none; color: #0000ff; background-color: #fffffe; -webkit-text-stroke: 0px #0000ff}
+    span.s7 {font-kerning: none; color: #093c94; background-color: #fffffe; -webkit-text-stroke: 0px #093c94}
+    span.s8 {font-kerning: none; color: #900112; background-color: #fffffe; -webkit-text-stroke: 0px #900112}
+    span.s9 {font-kerning: none}
+    span.s10 {font-kerning: none; color: #137646; background-color: #fffffe; -webkit-text-stroke: 0px #137646}
+    span.s11 {font-kerning: none; color: #0f7001; background-color: #fffffe; -webkit-text-stroke: 0px #0f7001}
+    span.s12 {font-kerning: none; color: #0e6e6d; background-color: #fffffe; -webkit-text-stroke: 0px #0e6e6d}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s3">&lt;</span><span class="s4">html</span><span class="s5"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s1">"zh-HK"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s6">"UTF-8"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s5"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">title</span><span class="s3">&gt;</span><span class="s1">夏日天氣AI小助手</span><span class="s3">&lt;/</span><span class="s4">title</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Tailwind CSS for Responsive Design --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- FontAwesome Icons --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">link</span><span class="s5"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Canvas Confetti for Celebration --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s6">@import</span><span class="s5"> </span><span class="s7">url</span><span class="s5">(</span><span class="s1">'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;800&amp;family=Mali:wght@600;700&amp;display=swap'</span><span class="s5">);</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">body</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s8">'Noto Sans TC'</span><span class="s1">, </span><span class="s7">sans-serif</span><span class="s1">;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">background-color:</span><span class="s5"> </span><span class="s7">#F0F9FF</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">touch-action:</span><span class="s1"> </span><span class="s7">manipulation</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.font-pinyin</span><span class="s5"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s8">'Mali'</span><span class="s1">, </span><span class="s7">cursive</span><span class="s1">, </span><span class="s7">sans-serif</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">/* Drag and Drop Visual Feedback */</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.drop-zone-active</span><span class="s5"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-style:</span><span class="s1"> </span><span class="s7">solid</span><span class="s1"> </span><span class="s6">!important</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-color:</span><span class="s1"> </span><span class="s7">#3B82F6</span><span class="s1"> </span><span class="s6">!important</span><span class="s1">;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">background-color:</span><span class="s5"> </span><span class="s7">#EFF6FF</span><span class="s5"> </span><span class="s6">!important</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s7">scale(</span><span class="s10">1.03</span><span class="s7">)</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.word-card-selected</span><span class="s5"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">ring:</span><span class="s1"> </span><span class="s10">4px</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">ring-color:</span><span class="s1"> </span><span class="s7">#3B82F6</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s7">scale(</span><span class="s10">1.05</span><span class="s7">)</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s3">&lt;</span><span class="s4">body</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"h-screen max-h-screen bg-gradient-to-b from-sky-100 via-blue-50 to-amber-50 text-slate-800 p-2 md:p-3 flex flex-col justify-between overflow-hidden select-none"</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Top Header Bar --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">header</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto w-full shrink-0 mb-1.5"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white/90 backdrop-blur rounded-xl p-2 shadow-sm border border-sky-200 flex items-center justify-between gap-2"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-2"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-8 h-8 bg-amber-400 text-white rounded-lg flex items-center justify-center text-base shadow"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"fa-solid fa-sun"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">h1</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm md:text-lg font-black text-slate-800 tracking-wide"</span><span class="s3">&gt;</span><span class="s5">夏日天氣AI小助手</span><span class="s3">&lt;/</span><span class="s4">h1</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-2"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"btn-sound-toggle"</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"toggleAudio()"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-1.5 bg-sky-100 hover:bg-sky-200 text-sky-700 px-2 py-1 rounded-lg text-xs font-semibold transition"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"sound-icon"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fa-solid fa-volume-high"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s6">"sound-text"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"hidden sm:inline"</span><span class="s3">&gt;</span><span class="s1">普通話發音：開啟</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"resetGame()"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-white px-2.5 py-1 rounded-lg text-xs font-bold shadow transition"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fa-solid fa-rotate-right"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">換一局</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">header</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Main Game Container: Fits exactly inside viewport without scrolling --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">main</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto w-full flex-1 min-h-0 flex flex-col gap-2 justify-start"</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Instructional Prompt Banner --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-blue-600 text-white p-1.5 md:p-2 rounded-xl shadow flex items-center justify-between gap-2 px-3 shrink-0"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-2"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fa-solid fa-circle-info text-yellow-300 text-base"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-xs font-bold"</span><span class="s3">&gt;</span><span class="s1">小提示：請觀察左上方圖片，把右上方詞語拖入下方空格，或先點詞語再點空格！</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"speakText('請觀察圖片，然後把正確的詞語放到句子的空格內。')"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-blue-500 hover:bg-blue-400 text-white p-1 rounded-md text-xs transition shrink-0"</span><span class="s5"> </span><span class="s2">title</span><span class="s3">=</span><span class="s1">"朗讀提示"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fa-solid fa-volume-high"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- TOP SECTION: Grid (Left: Image | Right: Word Bank) --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-12 gap-2 md:gap-2.5 shrink-0"</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- TOP-LEFT COLUMN: Weather Image --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"col-span-5 sm:col-span-5 lg:col-span-4 bg-white rounded-2xl p-2 md:p-2.5 shadow-md border border-sky-100 flex flex-col justify-start gap-1"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs font-bold text-slate-600 mb-0.5 flex items-center gap-1 shrink-0"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fa-solid fa-image text-sky-500"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s5"> 天氣照片：</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"weather-image-container"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full flex items-center justify-center bg-gradient-to-b from-sky-50 to-amber-50 rounded-xl p-1 border border-sky-100 relative overflow-hidden"</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- Dynamic Weather Photo Injected via JS --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- TOP-RIGHT COLUMN: Word Bank --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"col-span-7 sm:col-span-7 lg:col-span-8 bg-white rounded-2xl p-2 md:p-2.5 shadow-md border border-sky-100 flex flex-col justify-start gap-1 md:gap-1.5 min-h-0"</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center justify-between border-b border-slate-100 pb-1 shrink-0"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-1.5"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fa-solid fa-boxes-packing text-amber-500 text-base"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs md:text-sm font-bold text-slate-800"</span><span class="s3">&gt;</span><span class="s5">詞語庫 (點擊或拖拽)</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-2 text-[10px] md:text-xs font-semibold"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-1"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-2 h-2 rounded-full bg-blue-500 inline-block"</span><span class="s3">&gt;&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5"> 天氣</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-1"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-2 h-2 rounded-full bg-yellow-400 inline-block"</span><span class="s3">&gt;&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5"> 物品</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Weather Words Group (Blue Frame) --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col justify-start min-h-0"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[11px] font-bold text-blue-600 mb-0.5 uppercase tracking-wider flex items-center gap-1 shrink-0"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"fa-solid fa-cloud-sun"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s1"> 天氣詞語 (藍色框)：</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"weather-words-container"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-3 gap-1.5"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s11">&lt;!-- Injected by JS --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Item Words Group (Yellow Frame) --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col justify-start min-h-0 mt-0.5"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[11px] font-bold text-yellow-600 mb-0.5 uppercase tracking-wider flex items-center gap-1 shrink-0"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"fa-solid fa-bag-shopping"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s1"> 物品詞語 (黃色框)：</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"item-words-container"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-3 gap-1.5"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s11">&lt;!-- Injected by JS --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- BOTTOM SECTION: Sentence Fill-in-the-Blanks &amp; Mandarin Audio Button --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"shrink-0 bg-white rounded-2xl p-2 md:p-2.5 shadow-md border border-sky-100 flex flex-col gap-1.5 md:gap-2"</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Sentence Box --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-amber-50/80 rounded-xl p-2 md:p-2.5 border-2 border-dashed border-amber-200"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[11px] font-bold text-amber-700 mb-1 flex items-center gap-1"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"fa-solid fa-pen-to-square"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s1"> 請完成匯報句子：</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm md:text-lg font-bold leading-relaxed text-slate-800 flex flex-wrap items-center gap-1.5 md:gap-2"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">夏天到了，今天</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- Target Drop Zone 1: Weather (藍色框框對應) --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s6">"drop-weather"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                         </span></span><span class="s2">data-type</span><span class="s3">=</span><span class="s6">"weather"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                         </span></span><span class="s2">ondragover</span><span class="s3">=</span><span class="s6">"handleDragOver(event)"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                         </span></span><span class="s2">ondragleave</span><span class="s3">=</span><span class="s6">"handleDragLeave(event)"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                         </span></span><span class="s2">ondrop</span><span class="s3">=</span><span class="s6">"handleDrop(event)"</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                         </span></span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"handleSlotClick('weather')"</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                         </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center justify-center min-w-[100px] md:min-w-[120px] h-9 md:h-11 px-2 border-2 border-dashed border-blue-400 bg-blue-50/60 rounded-xl text-blue-800 transition cursor-pointer hover:bg-blue-100 relative group"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"slot-placeholder text-xs text-blue-400 font-semibold"</span><span class="s3">&gt;</span><span class="s5">[ 藍色框：天氣 ]</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">，我要帶</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- Target Drop Zone 2: Item (黃色框框對應) --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s6">"drop-item"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                         </span></span><span class="s2">data-type</span><span class="s3">=</span><span class="s6">"item"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                         </span></span><span class="s2">ondragover</span><span class="s3">=</span><span class="s6">"handleDragOver(event)"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                         </span></span><span class="s2">ondragleave</span><span class="s3">=</span><span class="s6">"handleDragLeave(event)"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                         </span></span><span class="s2">ondrop</span><span class="s3">=</span><span class="s6">"handleDrop(event)"</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                         </span></span><span class="s2">onclick</span><span class="s3">=</span><span class="s6">"handleSlotClick('item')"</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                         </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center justify-center min-w-[100px] md:min-w-[120px] h-9 md:h-11 px-2 border-2 border-dashed border-yellow-400 bg-yellow-50/60 rounded-xl text-yellow-800 transition cursor-pointer hover:bg-yellow-100 relative group"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"slot-placeholder text-xs text-yellow-500 font-semibold"</span><span class="s3">&gt;</span><span class="s5">[ 黃色框：物品 ]</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">。</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Full Sentence Speech Button --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"btn-speak-sentence"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">disabled</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">onclick</span><span class="s3">=</span><span class="s6">"speakFullSentence()"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full py-2 px-3 bg-slate-200 text-slate-400 font-extrabold text-xs md:text-sm rounded-xl flex items-center justify-center gap-2 shadow transition-all duration-300 disabled:cursor-not-allowed"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fa-solid fa-volume-high text-sm"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">按一下：以普通話讀出完整句子</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s4">main</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Win / Feedback Modal --&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"win-modal"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white rounded-3xl max-w-md w-full p-6 text-center shadow-2xl border-4 border-amber-300 transform transition-all scale-95"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-14 h-14 bg-amber-100 text-amber-500 rounded-full flex items-center justify-center text-2xl mx-auto mb-2 border-2 border-amber-300 shadow-inner"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fa-solid fa-trophy"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-black text-slate-800 mb-1.5"</span><span class="s3">&gt;</span><span class="s5">太棒了！答對了！🎉</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"modal-sentence-preview"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm font-bold text-sky-700 bg-sky-50 p-2.5 rounded-xl mb-3 border border-sky-200"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>夏天到了，今天...</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-xs text-slate-600 mb-4"</span><span class="s3">&gt;</span><span class="s1">你成功完成了夏天匯報句子！現在可以點擊按鈕練習普通話朗讀。</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col gap-2"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"speakFullSentence(); closeModal();"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-xs md:text-sm"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fa-solid fa-volume-high text-sm"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">聽普通話完整句子</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"resetGame(); closeModal();"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>再玩一局 🔄</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">// Vocabulary Dataset</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">const</span><span class="s1"> </span><span class="s12">WORD_DATA</span><span class="s1"> = [</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{ id: </span><span class="s8">'w1'</span><span class="s1">, text: </span><span class="s8">'炎熱'</span><span class="s1">, pinyin: </span><span class="s8">'yán rè'</span><span class="s1">, type: </span><span class="s8">'weather'</span><span class="s1">, icon: </span><span class="s8">'fa-temperature-high'</span><span class="s1">, isHot: </span><span class="s6">true</span><span class="s1"> },</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{ id: </span><span class="s8">'w2'</span><span class="s1">, text: </span><span class="s8">'陽光猛烈'</span><span class="s1">, pinyin: </span><span class="s8">'yáng guāng měng liè'</span><span class="s1">, type: </span><span class="s8">'weather'</span><span class="s1">, icon: </span><span class="s8">'fa-sun'</span><span class="s1">, isHot: </span><span class="s6">true</span><span class="s1"> },</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{ id: </span><span class="s8">'w3'</span><span class="s1">, text: </span><span class="s8">'下大雨'</span><span class="s1">, pinyin: </span><span class="s8">'xià dà yǔ'</span><span class="s1">, type: </span><span class="s8">'weather'</span><span class="s1">, icon: </span><span class="s8">'fa-cloud-showers-heavy'</span><span class="s1">, isRain: </span><span class="s6">true</span><span class="s1"> },</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{ id: </span><span class="s8">'i1'</span><span class="s1">, text: </span><span class="s8">'水壺'</span><span class="s1">, pinyin: </span><span class="s8">'shuǐ hú'</span><span class="s1">, type: </span><span class="s8">'item'</span><span class="s1">, icon: </span><span class="s8">'fa-bottle-water'</span><span class="s1">, isHot: </span><span class="s6">true</span><span class="s1">, isRain: </span><span class="s6">true</span><span class="s1"> },</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{ id: </span><span class="s8">'i2'</span><span class="s1">, text: </span><span class="s8">'太陽帽'</span><span class="s1">, pinyin: </span><span class="s8">'tài yáng mào'</span><span class="s1">, type: </span><span class="s8">'item'</span><span class="s1">, icon: </span><span class="s8">'fa-hat-cowboy-side'</span><span class="s1">, isHot: </span><span class="s6">true</span><span class="s1"> },</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{ id: </span><span class="s8">'i3'</span><span class="s1">, text: </span><span class="s8">'雨傘'</span><span class="s1">, pinyin: </span><span class="s8">'yǔ sǎn'</span><span class="s1">, type: </span><span class="s8">'item'</span><span class="s1">, icon: </span><span class="s8">'fa-umbrella'</span><span class="s1">, isRain: </span><span class="s6">true</span><span class="s1"> },</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{ id: </span><span class="s8">'i4'</span><span class="s1">, text: </span><span class="s8">'雨衣'</span><span class="s1">, pinyin: </span><span class="s8">'yǔ yī'</span><span class="s1">, type: </span><span class="s8">'item'</span><span class="s1">, icon: </span><span class="s8">'fa-vest'</span><span class="s1">, isRain: </span><span class="s6">true</span><span class="s1"> },</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{ id: </span><span class="s8">'i5'</span><span class="s1">, text: </span><span class="s8">'小扇子'</span><span class="s1">, pinyin: </span><span class="s8">'xiǎo shàn zi'</span><span class="s1">, type: </span><span class="s8">'item'</span><span class="s1">, icon: </span><span class="s8">'fa-fan'</span><span class="s1">, isHot: </span><span class="s6">true</span><span class="s1"> },</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{ id: </span><span class="s8">'i6'</span><span class="s1">, text: </span><span class="s8">'防曬霜'</span><span class="s1">, pinyin: </span><span class="s8">'fáng shài shuāng'</span><span class="s1">, type: </span><span class="s8">'item'</span><span class="s1">, icon: </span><span class="s8">'fa-pump-soap'</span><span class="s1">, isHot: </span><span class="s6">true</span><span class="s1"> }</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">// 專屬陽光 (Sunny) 照片庫（與用戶附件特徵一致的高清圖片）</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">const</span><span class="s1"> </span><span class="s12">SUNNY_IMAGES</span><span class="s1"> = [</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span>url: </span><span class="s1">'https://images.unsplash.com/photo-1601297183305-6df142704ea2?auto=format&amp;fit=crop&amp;w=800&amp;q=80'</span><span class="s5">,</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>alt: </span><span class="s8">'耀眼陽光與白雲'</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span>url: </span><span class="s1">'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80'</span><span class="s5">,</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>alt: </span><span class="s8">'晴朗陽光蔚藍大海'</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">// 專屬下雨 (Rainy) 高清實景照片</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">const</span><span class="s1"> </span><span class="s12">RAINY_IMAGES</span><span class="s1"> = [</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span>url: </span><span class="s1">'https://images.unsplash.com/photo-1519692933481-e162a57d6721?auto=format&amp;fit=crop&amp;w=800&amp;q=80'</span><span class="s5">,</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>alt: </span><span class="s8">'下雨水滴'</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span>url: </span><span class="s1">'https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&amp;fit=crop&amp;w=800&amp;q=80'</span><span class="s5">,</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>alt: </span><span class="s8">'傾盆大雨'</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">// State Variables</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">let</span><span class="s1"> currentScenario = </span><span class="s6">null</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">let</span><span class="s1"> currentAnswers = { weather: </span><span class="s6">null</span><span class="s1">, item: </span><span class="s6">null</span><span class="s1"> };</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">let</span><span class="s1"> selectedWordId = </span><span class="s6">null</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">let</span><span class="s1"> isAudioEnabled = </span><span class="s6">true</span><span class="s1">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">const</span><span class="s1"> audioCache = {};</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">let</span><span class="s1"> currentAudioPlayer = </span><span class="s6">null</span><span class="s1">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> playSound(type) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (!isAudioEnabled) </span><span class="s6">return</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">try</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> </span><span class="s12">AudioContext</span><span class="s1"> = window.</span><span class="s12">AudioContext</span><span class="s1"> || window.webkitAudioContext;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (!</span><span class="s12">AudioContext</span><span class="s1">) </span><span class="s6">return</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> ctx = </span><span class="s6">new</span><span class="s1"> </span><span class="s12">AudioContext</span><span class="s1">();</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (type === </span><span class="s8">'correct'</span><span class="s1">) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> osc1 = ctx.createOscillator();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> gain1 = ctx.createGain();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc1.type = </span><span class="s8">'sine'</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc1.frequency.setValueAtTime(</span><span class="s10">523.25</span><span class="s1">, ctx.currentTime);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc1.frequency.setValueAtTime(</span><span class="s10">783.99</span><span class="s1">, ctx.currentTime + </span><span class="s10">0.12</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>gain1.gain.setValueAtTime(</span><span class="s10">0.2</span><span class="s1">, ctx.currentTime);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>gain1.gain.exponentialRampToValueAtTime(</span><span class="s10">0.01</span><span class="s1">, ctx.currentTime + </span><span class="s10">0.35</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc1.connect(gain1);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>gain1.connect(ctx.destination);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc1.start();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc1.stop(ctx.currentTime + </span><span class="s10">0.35</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s6">else</span><span class="s1"> </span><span class="s6">if</span><span class="s1"> (type === </span><span class="s8">'wrong'</span><span class="s1">) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> osc2 = ctx.createOscillator();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> gain2 = ctx.createGain();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc2.type = </span><span class="s8">'sawtooth'</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc2.frequency.setValueAtTime(</span><span class="s10">164.81</span><span class="s1">, ctx.currentTime);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc2.frequency.setValueAtTime(</span><span class="s10">130.81</span><span class="s1">, ctx.currentTime + </span><span class="s10">0.15</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>gain2.gain.setValueAtTime(</span><span class="s10">0.2</span><span class="s1">, ctx.currentTime);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>gain2.gain.exponentialRampToValueAtTime(</span><span class="s10">0.01</span><span class="s1">, ctx.currentTime + </span><span class="s10">0.3</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc2.connect(gain2);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>gain2.connect(ctx.destination);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc2.start();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>osc2.stop(ctx.currentTime + </span><span class="s10">0.3</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">catch</span><span class="s1"> (e) {}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> base64ToArrayBuffer(base64) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> binaryString = window.atob(base64);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> len = binaryString.length;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> bytes = </span><span class="s6">new</span><span class="s1"> </span><span class="s12">Uint8Array</span><span class="s1">(len);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">for</span><span class="s1"> (</span><span class="s6">let</span><span class="s1"> i = </span><span class="s10">0</span><span class="s1">; i &lt; len; i++) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>bytes[i] = binaryString.charCodeAt(i);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">return</span><span class="s1"> bytes.buffer;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> pcmToWav(pcm16Data, sampleRate) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> numChannels = </span><span class="s10">1</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> bitsPerSample = </span><span class="s10">16</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> byteRate = sampleRate * numChannels * (bitsPerSample / </span><span class="s10">8</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> blockAlign = numChannels * (bitsPerSample / </span><span class="s10">8</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> dataSize = pcm16Data.length * </span><span class="s10">2</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> chunkSize = </span><span class="s10">36</span><span class="s1"> + dataSize;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> buffer = </span><span class="s6">new</span><span class="s1"> </span><span class="s12">ArrayBuffer</span><span class="s1">(</span><span class="s10">44</span><span class="s1"> + dataSize);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> view = </span><span class="s6">new</span><span class="s1"> </span><span class="s12">DataView</span><span class="s1">(buffer);</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>writeString(view, </span><span class="s10">0</span><span class="s1">, </span><span class="s8">'RIFF'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>view.setUint32(</span><span class="s10">4</span><span class="s1">, chunkSize, </span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>writeString(view, </span><span class="s10">8</span><span class="s1">, </span><span class="s8">'WAVE'</span><span class="s1">);</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>writeString(view, </span><span class="s10">12</span><span class="s1">, </span><span class="s8">'fmt '</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>view.setUint32(</span><span class="s10">16</span><span class="s1">, </span><span class="s10">16</span><span class="s1">, </span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>view.setUint16(</span><span class="s10">20</span><span class="s1">, </span><span class="s10">1</span><span class="s1">, </span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>view.setUint16(</span><span class="s10">22</span><span class="s1">, numChannels, </span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>view.setUint32(</span><span class="s10">24</span><span class="s1">, sampleRate, </span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>view.setUint32(</span><span class="s10">28</span><span class="s1">, byteRate, </span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>view.setUint16(</span><span class="s10">32</span><span class="s1">, blockAlign, </span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>view.setUint16(</span><span class="s10">34</span><span class="s1">, bitsPerSample, </span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>writeString(view, </span><span class="s10">36</span><span class="s1">, </span><span class="s8">'data'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>view.setUint32(</span><span class="s10">40</span><span class="s1">, dataSize, </span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">let</span><span class="s1"> offset = </span><span class="s10">44</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">for</span><span class="s1"> (</span><span class="s6">let</span><span class="s1"> i = </span><span class="s10">0</span><span class="s1">; i &lt; pcm16Data.length; i++, offset += </span><span class="s10">2</span><span class="s1">) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>view.setInt16(offset, pcm16Data[i], </span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">return</span><span class="s1"> </span><span class="s6">new</span><span class="s1"> </span><span class="s12">Blob</span><span class="s1">([buffer], { type: </span><span class="s8">'audio/wav'</span><span class="s1"> });</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> writeString(view, offset, string) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">for</span><span class="s1"> (</span><span class="s6">let</span><span class="s1"> i = </span><span class="s10">0</span><span class="s1">; i &lt; string.length; i++) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>view.setUint8(offset + i, string.charCodeAt(i));</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">async</span><span class="s1"> </span><span class="s6">function</span><span class="s1"> speakText(text) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (!isAudioEnabled) </span><span class="s6">return</span><span class="s1">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (currentAudioPlayer) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>currentAudioPlayer.pause();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>currentAudioPlayer = </span><span class="s6">null</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (audioCache[text]) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>currentAudioPlayer = </span><span class="s6">new</span><span class="s1"> </span><span class="s12">Audio</span><span class="s1">(audioCache[text]);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>currentAudioPlayer.play().</span><span class="s6">catch</span><span class="s1">(e =&gt; console.warn(e));</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">return</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">// 1. 嘗試 Gemini API (若有 API key)</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">try</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> apiKey = </span><span class="s8">""</span><span class="s1">;<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (apiKey) {</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s5"> apiUrl = </span><span class="s1">`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=</span><span class="s5">${apiKey}</span><span class="s1">`</span><span class="s5">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> payload = {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>contents: [{</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>parts: [{ text: </span><span class="s8">`請用標準國語/普通話讀出：</span><span class="s1">${text}</span><span class="s8">`</span><span class="s1"> }]</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>}],</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>generationConfig: {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>responseModalities: [</span><span class="s8">"AUDIO"</span><span class="s1">],</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>speechConfig: {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>voiceConfig: {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>prebuiltVoiceConfig: { voiceName: </span><span class="s8">"Kore"</span><span class="s1"> }</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>};</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> response = </span><span class="s6">await</span><span class="s1"> fetch(apiUrl, {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>method: </span><span class="s8">'POST'</span><span class="s1">,</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>headers: { </span><span class="s8">'Content-Type'</span><span class="s1">: </span><span class="s8">'application/json'</span><span class="s1"> },</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>body: </span><span class="s12">JSON</span><span class="s1">.stringify(payload)</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>});</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">if</span><span class="s1"> (response.ok) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s6">const</span><span class="s1"> result = </span><span class="s6">await</span><span class="s1"> response.json();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s6">const</span><span class="s1"> part = result?.candidates?.[</span><span class="s10">0</span><span class="s1">]?.content?.parts?.[</span><span class="s10">0</span><span class="s1">];</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s6">const</span><span class="s1"> audioData = part?.inlineData?.data;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s6">const</span><span class="s1"> mimeType = part?.inlineData?.mimeType || </span><span class="s8">"audio/L16;rate=24000"</span><span class="s1">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s6">if</span><span class="s1"> (audioData) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s6">let</span><span class="s1"> sampleRate = </span><span class="s10">24000</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s6">const</span><span class="s1"> match = mimeType.match(</span><span class="s4">/rate=(\d+)/</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s6">if</span><span class="s1"> (match &amp;&amp; match[</span><span class="s10">1</span><span class="s1">]) sampleRate = parseInt(match[</span><span class="s10">1</span><span class="s1">], </span><span class="s10">10</span><span class="s1">);</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s6">const</span><span class="s1"> pcmData = base64ToArrayBuffer(audioData);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s6">const</span><span class="s1"> pcm16 = </span><span class="s6">new</span><span class="s1"> </span><span class="s12">Int16Array</span><span class="s1">(pcmData);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s6">const</span><span class="s1"> wavBlob = pcmToWav(pcm16, sampleRate);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s6">const</span><span class="s1"> audioUrl = </span><span class="s12">URL</span><span class="s1">.createObjectURL(wavBlob);</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>audioCache[text] = audioUrl;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>currentAudioPlayer = </span><span class="s6">new</span><span class="s1"> </span><span class="s12">Audio</span><span class="s1">(audioUrl);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>currentAudioPlayer.play();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s6">return</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">catch</span><span class="s1"> (err) {}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">// 2. 嘗試 Google 國語/普通話語音接口 (適合 GitHub Pages，無需 API Key，支援長句)</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">try</span><span class="s1"> {</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s5"> googleMandarinUrl = </span><span class="s1">`https://translate.google.com/translate_tts?ie=UTF-8&amp;q=</span><span class="s5">${encodeURIComponent(text)}</span><span class="s1">&amp;tl=zh-CN&amp;client=tw-ob`</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>currentAudioPlayer = </span><span class="s6">new</span><span class="s1"> </span><span class="s12">Audio</span><span class="s1">(googleMandarinUrl);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">await</span><span class="s1"> currentAudioPlayer.play();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>audioCache[text] = googleMandarinUrl;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">return</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">catch</span><span class="s1"> (e) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">// 3. 次要備用：有道語音</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">try</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> onlineMandarinUrl = </span><span class="s8">`https://dict.youdao.com/dictvoice?audio=</span><span class="s1">${encodeURIComponent(text)}</span><span class="s8">&amp;type=1`</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>currentAudioPlayer = </span><span class="s6">new</span><span class="s1"> </span><span class="s12">Audio</span><span class="s1">(onlineMandarinUrl);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">await</span><span class="s1"> currentAudioPlayer.play();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">return</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s6">catch</span><span class="s1"> (err2) {</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s1">// 4. 最終備用：iPad / Web Speech API (已優化 iOS 國語聲線選取)</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>speakTextWebSpeechFallback(text);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> speakTextWebSpeechFallback(text) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> synth = window.speechSynthesis;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (!synth) </span><span class="s6">return</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>synth.cancel();</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> voices = synth.getVoices() || [];</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">// 嚴格篩選 iPad/iOS 上的國語/普通話聲線，排除廣東話 (Sin-Ji 等)</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">let</span><span class="s1"> mandarinVoice = voices.find(v =&gt; {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> lang = (v.lang || </span><span class="s8">''</span><span class="s1">).toLowerCase();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> name = (v.name || </span><span class="s8">''</span><span class="s1">).toLowerCase();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> isCanto = lang.includes(</span><span class="s8">'hk'</span><span class="s1">) || lang.includes(</span><span class="s8">'yue'</span><span class="s1">) || name.includes(</span><span class="s8">'cantonese'</span><span class="s1">) || name.includes(</span><span class="s8">'sin-ji'</span><span class="s1">) || name.includes(</span><span class="s8">'sinji'</span><span class="s1">) || name.includes(</span><span class="s8">'粵語'</span><span class="s1">) || name.includes(</span><span class="s8">'廣東話'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> isMandarin = lang.includes(</span><span class="s8">'zh-cn'</span><span class="s1">) || lang.includes(</span><span class="s8">'zh-tw'</span><span class="s1">) || lang.includes(</span><span class="s8">'zh-sg'</span><span class="s1">) || lang.includes(</span><span class="s8">'zh-cmn'</span><span class="s1">) || name.includes(</span><span class="s8">'putonghua'</span><span class="s1">) || name.includes(</span><span class="s8">'mandarin'</span><span class="s1">) || name.includes(</span><span class="s8">'國語'</span><span class="s1">) || name.includes(</span><span class="s8">'ting-ting'</span><span class="s1">) || name.includes(</span><span class="s8">'mei-jia'</span><span class="s1">) || name.includes(</span><span class="s8">'lili'</span><span class="s1">) || name.includes(</span><span class="s8">'yushu'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">return</span><span class="s1"> !isCanto &amp;&amp; isMandarin;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">// 若未精準匹配，則選取任意非廣東話的中文聲線</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (!mandarinVoice) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>mandarinVoice = voices.find(v =&gt; {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> lang = (v.lang || </span><span class="s8">''</span><span class="s1">).toLowerCase();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> name = (v.name || </span><span class="s8">''</span><span class="s1">).toLowerCase();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> isCanto = lang.includes(</span><span class="s8">'hk'</span><span class="s1">) || lang.includes(</span><span class="s8">'yue'</span><span class="s1">) || name.includes(</span><span class="s8">'cantonese'</span><span class="s1">) || name.includes(</span><span class="s8">'sin-ji'</span><span class="s1">) || name.includes(</span><span class="s8">'sinji'</span><span class="s1">) || name.includes(</span><span class="s8">'粵語'</span><span class="s1">) || name.includes(</span><span class="s8">'廣東話'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">return</span><span class="s1"> !isCanto &amp;&amp; lang.startsWith(</span><span class="s8">'zh'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> utterance = </span><span class="s6">new</span><span class="s1"> </span><span class="s12">SpeechSynthesisUtterance</span><span class="s1">(text);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>utterance.lang = </span><span class="s8">'zh-CN'</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (mandarinVoice) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>utterance.voice = mandarinVoice;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>utterance.rate = </span><span class="s10">0.85</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>synth.speak(utterance);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> toggleAudio() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>isAudioEnabled = !isAudioEnabled;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> soundIcon = document.getElementById(</span><span class="s8">'sound-icon'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> soundText = document.getElementById(</span><span class="s8">'sound-text'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (isAudioEnabled) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>soundIcon.className = </span><span class="s8">'fa-solid fa-volume-high'</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>soundText.innerText = </span><span class="s8">'普通話發音：開啟'</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">else</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>soundIcon.className = </span><span class="s8">'fa-solid fa-volume-xmark'</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>soundText.innerText = </span><span class="s8">'普通話發音：靜音'</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (currentAudioPlayer) currentAudioPlayer.pause();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (window.speechSynthesis) window.speechSynthesis.cancel();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> initGame() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>currentAnswers = { weather: </span><span class="s6">null</span><span class="s1">, item: </span><span class="s6">null</span><span class="s1"> };</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>selectedWordId = </span><span class="s6">null</span><span class="s1">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>currentScenario = </span><span class="s12">Math</span><span class="s1">.random() &lt; </span><span class="s10">0.5</span><span class="s1"> ? </span><span class="s8">'sunny'</span><span class="s1"> : </span><span class="s8">'rainy'</span><span class="s1">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>renderWeatherImage();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>renderWordCards();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>updateSlotsUI();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>updateSpeakButton();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> renderWeatherImage() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> container = document.getElementById(</span><span class="s8">'weather-image-container'</span><span class="s1">);</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (currentScenario === </span><span class="s8">'sunny'</span><span class="s1">) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> photo = </span><span class="s12">SUNNY_IMAGES</span><span class="s1">[</span><span class="s12">Math</span><span class="s1">.floor(</span><span class="s12">Math</span><span class="s1">.random() * </span><span class="s12">SUNNY_IMAGES</span><span class="s1">.length)];</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>container.innerHTML = </span><span class="s8">`</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="relative w-full h-36 md:h-40 overflow-hidden rounded-xl shadow-md border-2 border-amber-300 group flex items-center justify-center"&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;img src="</span><span class="s5">${photo.url}</span><span class="s1">"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                             </span>alt="</span><span class="s5">${photo.alt}</span><span class="s1">"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                             </span>onerror="this.onerror=null; this.src='https://placehold.co/600x400/f59e0b/ffffff?text=%E9%99%BD%E5%85%89%E7%8C%9B%E7%83%88';"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                             </span>class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span>`</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">else</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> photo = </span><span class="s12">RAINY_IMAGES</span><span class="s1">[</span><span class="s12">Math</span><span class="s1">.floor(</span><span class="s12">Math</span><span class="s1">.random() * </span><span class="s12">RAINY_IMAGES</span><span class="s1">.length)];</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>container.innerHTML = </span><span class="s8">`</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="relative w-full h-36 md:h-40 overflow-hidden rounded-xl shadow-md border-2 border-blue-400 group flex items-center justify-center"&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;img src="</span><span class="s5">${photo.url}</span><span class="s1">"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                             </span>alt="</span><span class="s5">${photo.alt}</span><span class="s1">"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                             </span>onerror="this.onerror=null; this.src='https://placehold.co/600x400/2563eb/ffffff?text=%E4%B8%8B%E5%A4%A7%E9%9B%A8';"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                             </span>class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span>`</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> renderWordCards() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> weatherContainer = document.getElementById(</span><span class="s8">'weather-words-container'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> itemContainer = document.getElementById(</span><span class="s8">'item-words-container'</span><span class="s1">);</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>weatherContainer.innerHTML = </span><span class="s8">''</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>itemContainer.innerHTML = </span><span class="s8">''</span><span class="s1">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> shuffled = [...</span><span class="s12">WORD_DATA</span><span class="s1">].sort(() =&gt; </span><span class="s12">Math</span><span class="s1">.random() - </span><span class="s10">0.5</span><span class="s1">);</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>shuffled.forEach(item =&gt; {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> isWeather = item.type === </span><span class="s8">'weather'</span><span class="s1">;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> borderClass = isWeather<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                    </span>? </span><span class="s1">'border-2 border-blue-400 bg-blue-50/50 hover:bg-blue-100/70 text-blue-900'</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                    </span>: </span><span class="s1">'border-2 border-amber-400 bg-amber-50/50 hover:bg-amber-100/70 text-amber-900'</span><span class="s5">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> cardHtml = </span><span class="s8">`</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div id="card-</span><span class="s5">${item.id}</span><span class="s1">"</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                         </span>draggable="true"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                         </span>ondragstart="handleDragStart(event, '</span><span class="s5">${item.id}</span><span class="s1">')"</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                         </span>onclick="handleCardClick('</span><span class="s5">${item.id}</span><span class="s1">')"</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                         </span>class="word-card </span><span class="s5">${borderClass}</span><span class="s1"> rounded-xl p-1.5 pt-2 shadow-sm hover:shadow transition-all cursor-grab active:cursor-grabbing flex flex-col items-center justify-center select-none relative group"&gt;</span></p>
+<p class="p9"><span class="s1"><span class="Apple-converted-space">                        </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;!-- 語音按鈕定位於右上角，不影響拼音居中 --&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button onclick="event.stopPropagation(); speakText('</span><span class="s5">${item.text}</span><span class="s1">')"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                                </span>class="absolute top-1 right-1 w-4 h-4 md:w-5 md:h-5 rounded-full bg-white/80 hover:bg-white text-sky-600 flex items-center justify-center text-[9px] md:text-[10px] shadow-sm transition shrink-0 z-10"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                                </span>title="聽語音"&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;i class="fa-solid fa-volume-high"&gt;&lt;/i&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;!-- 文字正上方的居中拼音 --&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="font-pinyin text-[10px] md:text-[11px] font-semibold text-slate-500 tracking-wide text-center leading-tight mb-0.5"&gt;</span><span class="s5">${item.pinyin}</span><span class="s1">&lt;/span&gt;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;!-- 圖標與中文詞語 --&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center justify-center gap-1"&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;i class="fa-solid </span><span class="s5">${item.icon}</span><span class="s1"> text-xs opacity-80"&gt;&lt;/i&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;span class="text-xs md:text-sm font-black"&gt;</span><span class="s5">${item.text}</span><span class="s1">&lt;/span&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span>`</span><span class="s5">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (isWeather) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>weatherContainer.innerHTML += cardHtml;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s6">else</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>itemContainer.innerHTML += cardHtml;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> handleDragStart(e, wordId) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>e.dataTransfer.setData(</span><span class="s8">'text/plain'</span><span class="s1">, wordId);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>selectedWordId = wordId;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> handleDragOver(e) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>e.preventDefault();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>e.currentTarget.classList.add(</span><span class="s8">'drop-zone-active'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> handleDragLeave(e) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>e.currentTarget.classList.remove(</span><span class="s8">'drop-zone-active'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> handleDrop(e) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>e.preventDefault();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>e.currentTarget.classList.remove(</span><span class="s8">'drop-zone-active'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> wordId = e.dataTransfer.getData(</span><span class="s8">'text/plain'</span><span class="s1">) || selectedWordId;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> slotType = e.currentTarget.getAttribute(</span><span class="s8">'data-type'</span><span class="s1">);</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (wordId) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>placeWordIntoSlot(wordId, slotType);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> handleCardClick(wordId) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document.querySelectorAll(</span><span class="s8">'.word-card'</span><span class="s1">).forEach(c =&gt; c.classList.remove(</span><span class="s8">'ring-4'</span><span class="s1">, </span><span class="s8">'ring-blue-400'</span><span class="s1">, </span><span class="s8">'scale-105'</span><span class="s1">));</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (selectedWordId === wordId) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>selectedWordId = </span><span class="s6">null</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">else</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>selectedWordId = wordId;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> card = document.getElementById(</span><span class="s8">`card-</span><span class="s1">${wordId}</span><span class="s8">`</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (card) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>card.classList.add(</span><span class="s8">'ring-4'</span><span class="s1">, </span><span class="s8">'ring-blue-400'</span><span class="s1">, </span><span class="s8">'scale-105'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> handleSlotClick(slotType) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (selectedWordId) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>placeWordIntoSlot(selectedWordId, slotType);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>selectedWordId = </span><span class="s6">null</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>document.querySelectorAll(</span><span class="s8">'.word-card'</span><span class="s1">).forEach(c =&gt; c.classList.remove(</span><span class="s8">'ring-4'</span><span class="s1">, </span><span class="s8">'ring-blue-400'</span><span class="s1">, </span><span class="s8">'scale-105'</span><span class="s1">));</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">else</span><span class="s1"> </span><span class="s6">if</span><span class="s1"> (currentAnswers[slotType]) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>currentAnswers[slotType] = </span><span class="s6">null</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>updateSlotsUI();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>checkSentenceCompletion();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> placeWordIntoSlot(wordId, slotType) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> word = </span><span class="s12">WORD_DATA</span><span class="s1">.find(w =&gt; w.id === wordId);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (!word) </span><span class="s6">return</span><span class="s1">;</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (word.type !== slotType) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>playSound(</span><span class="s8">'wrong'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">return</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">let</span><span class="s1"> isCorrect = </span><span class="s6">false</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (currentScenario === </span><span class="s8">'sunny'</span><span class="s1">) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (slotType === </span><span class="s8">'weather'</span><span class="s1"> &amp;&amp; word.isHot) isCorrect = </span><span class="s6">true</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (slotType === </span><span class="s8">'item'</span><span class="s1"> &amp;&amp; word.isHot) isCorrect = </span><span class="s6">true</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">else</span><span class="s1"> </span><span class="s6">if</span><span class="s1"> (currentScenario === </span><span class="s8">'rainy'</span><span class="s1">) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (slotType === </span><span class="s8">'weather'</span><span class="s1"> &amp;&amp; word.isRain) isCorrect = </span><span class="s6">true</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (slotType === </span><span class="s8">'item'</span><span class="s1"> &amp;&amp; word.isRain) isCorrect = </span><span class="s6">true</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (isCorrect) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>currentAnswers[slotType] = word;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>playSound(</span><span class="s8">'correct'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>updateSlotsUI();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>checkSentenceCompletion();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">else</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>playSound(</span><span class="s8">'wrong'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> updateSlotsUI() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> weatherSlot = document.getElementById(</span><span class="s8">'drop-weather'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (currentAnswers.weather) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>weatherSlot.innerHTML = </span><span class="s8">`</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center gap-1.5 bg-blue-500 text-white px-2 py-0.5 rounded-lg font-black text-xs md:text-sm shadow"&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid </span><span class="s5">${currentAnswers.weather.icon}</span><span class="s1">"&gt;&lt;/i&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span&gt;</span><span class="s5">${currentAnswers.weather.text}</span><span class="s1">&lt;/span&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button onclick="event.stopPropagation(); speakText('</span><span class="s5">${currentAnswers.weather.text}</span><span class="s1">')"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                                </span>class="w-4 h-4 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center text-[9px] transition"&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;i class="fa-solid fa-volume-high"&gt;&lt;/i&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid fa-circle-xmark text-xs cursor-pointer opacity-80 hover:opacity-100 ml-0.5" onclick="event.stopPropagation(); clearSlot('weather')" title="清除"&gt;&lt;/i&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span>`</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>weatherSlot.classList.remove(</span><span class="s8">'border-dashed'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>weatherSlot.classList.add(</span><span class="s8">'border-solid'</span><span class="s1">, </span><span class="s8">'border-blue-500'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">else</span><span class="s1"> {</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span>weatherSlot.innerHTML = </span><span class="s1">`&lt;span class="slot-placeholder text-xs text-blue-400 font-semibold"&gt;[ 藍色框：天氣 ]&lt;/span&gt;`</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>weatherSlot.classList.add(</span><span class="s8">'border-dashed'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> itemSlot = document.getElementById(</span><span class="s8">'drop-item'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (currentAnswers.item) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>itemSlot.innerHTML = </span><span class="s8">`</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center gap-1.5 bg-amber-500 text-white px-2 py-0.5 rounded-lg font-black text-xs md:text-sm shadow"&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid </span><span class="s5">${currentAnswers.item.icon}</span><span class="s1">"&gt;&lt;/i&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span&gt;</span><span class="s5">${currentAnswers.item.text}</span><span class="s1">&lt;/span&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button onclick="event.stopPropagation(); speakText('</span><span class="s5">${currentAnswers.item.text}</span><span class="s1">')"<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                                </span>class="w-4 h-4 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center text-[9px] transition"&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;i class="fa-solid fa-volume-high"&gt;&lt;/i&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid fa-circle-xmark text-xs cursor-pointer opacity-80 hover:opacity-100 ml-0.5" onclick="event.stopPropagation(); clearSlot('item')" title="清除"&gt;&lt;/i&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span>`</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>itemSlot.classList.remove(</span><span class="s8">'border-dashed'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>itemSlot.classList.add(</span><span class="s8">'border-solid'</span><span class="s1">, </span><span class="s8">'border-yellow-400'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">else</span><span class="s1"> {</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span>itemSlot.innerHTML = </span><span class="s1">`&lt;span class="slot-placeholder text-xs text-yellow-500 font-semibold"&gt;[ 黃色框：物品 ]&lt;/span&gt;`</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>itemSlot.classList.add(</span><span class="s8">'border-dashed'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">WORD_DATA</span><span class="s1">.forEach(w =&gt; {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> card = document.getElementById(</span><span class="s8">`card-</span><span class="s1">${w.id}</span><span class="s8">`</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (card) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">if</span><span class="s1"> ((currentAnswers.weather &amp;&amp; currentAnswers.weather.id === w.id) ||</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>(currentAnswers.item &amp;&amp; currentAnswers.item.id === w.id)) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>card.classList.add(</span><span class="s8">'opacity-30'</span><span class="s1">, </span><span class="s8">'pointer-events-none'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>} </span><span class="s6">else</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>card.classList.remove(</span><span class="s8">'opacity-30'</span><span class="s1">, </span><span class="s8">'pointer-events-none'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> clearSlot(type) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>currentAnswers[type] = </span><span class="s6">null</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>updateSlotsUI();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>updateSpeakButton();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> checkSentenceCompletion() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (currentAnswers.weather &amp;&amp; currentAnswers.item) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>updateSpeakButton(</span><span class="s6">true</span><span class="s1">);</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">try</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>confetti({</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>particleCount: </span><span class="s10">70</span><span class="s1">,</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>spread: </span><span class="s10">60</span><span class="s1">,</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>origin: { y: </span><span class="s10">0.6</span><span class="s1"> }</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>});</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s6">catch</span><span class="s1"> (e) {}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s6">const</span><span class="s1"> fullText = getFullSentenceText();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>document.getElementById(</span><span class="s8">'modal-sentence-preview'</span><span class="s1">).innerText = fullText;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>document.getElementById(</span><span class="s8">'win-modal'</span><span class="s1">).classList.remove(</span><span class="s8">'hidden'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}, </span><span class="s10">400</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">else</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>updateSpeakButton(</span><span class="s6">false</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> getFullSentenceText() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> wText = currentAnswers.weather ? currentAnswers.weather.text : </span><span class="s8">''</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> iText = currentAnswers.item ? currentAnswers.item.text : </span><span class="s8">''</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">return</span><span class="s1"> </span><span class="s8">`夏天到了，今天</span><span class="s1">${wText}</span><span class="s8">，我要帶</span><span class="s1">${iText}</span><span class="s8">。`</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> updateSpeakButton(enabled = </span><span class="s6">false</span><span class="s1">) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">const</span><span class="s1"> btn = document.getElementById(</span><span class="s8">'btn-speak-sentence'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (enabled &amp;&amp; currentAnswers.weather &amp;&amp; currentAnswers.item) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>btn.disabled = </span><span class="s6">false</span><span class="s1">;</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span>btn.className = </span><span class="s1">"w-full py-2 px-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-extrabold text-xs md:text-sm rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 cursor-pointer animate-pulse shrink-0"</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s6">else</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>btn.disabled = </span><span class="s6">true</span><span class="s1">;</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span>btn.className = </span><span class="s1">"w-full py-2 px-3 bg-slate-200 text-slate-400 font-extrabold text-xs md:text-sm rounded-xl flex items-center justify-center gap-2 shadow transition-all duration-300 shrink-0 disabled:cursor-not-allowed"</span><span class="s5">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> speakFullSentence() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (currentAnswers.weather &amp;&amp; currentAnswers.item) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">const</span><span class="s1"> sentence = getFullSentenceText();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>speakText(sentence);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> closeModal() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById(</span><span class="s8">'win-modal'</span><span class="s1">).classList.add(</span><span class="s8">'hidden'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">function</span><span class="s1"> resetGame() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>initGame();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>window.onload = </span><span class="s6">function</span><span class="s1">() {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>initGame();</span></p>
+<p class="p8"><span class="s9"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">if</span><span class="s1"> (window.speechSynthesis) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>window.speechSynthesis.getVoices();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">if</span><span class="s1"> (window.speechSynthesis.onvoiceschanged !== </span><span class="s6">undefined</span><span class="s1">) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>window.speechSynthesis.onvoiceschanged = () =&gt; {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>window.speechSynthesis.getVoices();</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>};</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+</body>
+</html>
