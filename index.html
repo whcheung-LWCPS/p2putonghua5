@@ -249,15 +249,48 @@
         let selectedWordId = null;
         let isAudioEnabled = true;
 
-        const audioCache = {};
-        let currentAudioPlayer = null;
+        // iPad / iOS Audio Context & Speech Unlock
+        let audioCtx = null;
+        let isAudioUnlocked = false;
+
+        function getAudioContext() {
+            if (!audioCtx) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (AudioContext) {
+                    audioCtx = new AudioContext();
+                }
+            }
+            return audioCtx;
+        }
+
+        // 螢幕第一次點擊時主動解鎖 iPad 音訊與語音播放權限
+        function unlockAudioOnIOS() {
+            if (isAudioUnlocked) return;
+            
+            const ctx = getAudioContext();
+            if (ctx && ctx.state === 'suspended') {
+                ctx.resume();
+            }
+
+            if (window.speechSynthesis) {
+                window.speechSynthesis.resume();
+                const silentUtterance = new SpeechSynthesisUtterance('');
+                window.speechSynthesis.speak(silentUtterance);
+            }
+
+            isAudioUnlocked = true;
+        }
 
         function playSound(type) {
             if (!isAudioEnabled) return;
             try {
-                const AudioContext = window.AudioContext || window.webkitAudioContext;
-                if (!AudioContext) return;
-                const ctx = new AudioContext();
+                unlockAudioOnIOS();
+                const ctx = getAudioContext();
+                if (!ctx) return;
+                
+                if (ctx.state === 'suspended') {
+                    ctx.resume();
+                }
 
                 if (type === 'correct') {
                     const osc1 = ctx.createOscillator();
@@ -284,178 +317,52 @@
                     osc2.start();
                     osc2.stop(ctx.currentTime + 0.3);
                 }
-            } catch (e) {}
-        }
-
-        function base64ToArrayBuffer(base64) {
-            const binaryString = window.atob(base64);
-            const len = binaryString.length;
-            const bytes = new Uint8Array(len);
-            for (let i = 0; i < len; i++) {
-                bytes[i] = binaryString.charCodeAt(i);
-            }
-            return bytes.buffer;
-        }
-
-        function pcmToWav(pcm16Data, sampleRate) {
-            const numChannels = 1;
-            const bitsPerSample = 16;
-            const byteRate = sampleRate * numChannels * (bitsPerSample / 8);
-            const blockAlign = numChannels * (bitsPerSample / 8);
-            const dataSize = pcm16Data.length * 2;
-            const chunkSize = 36 + dataSize;
-            
-            const buffer = new ArrayBuffer(44 + dataSize);
-            const view = new DataView(buffer);
-            
-            writeString(view, 0, 'RIFF');
-            view.setUint32(4, chunkSize, true);
-            writeString(view, 8, 'WAVE');
-            
-            writeString(view, 12, 'fmt ');
-            view.setUint32(16, 16, true);
-            view.setUint16(20, 1, true);
-            view.setUint16(22, numChannels, true);
-            view.setUint32(24, sampleRate, true);
-            view.setUint32(28, byteRate, true);
-            view.setUint16(32, blockAlign, true);
-            view.setUint16(34, bitsPerSample, true);
-            
-            writeString(view, 36, 'data');
-            view.setUint32(40, dataSize, true);
-            
-            let offset = 44;
-            for (let i = 0; i < pcm16Data.length; i++, offset += 2) {
-                view.setInt16(offset, pcm16Data[i], true);
-            }
-            
-            return new Blob([buffer], { type: 'audio/wav' });
-        }
-
-        function writeString(view, offset, string) {
-            for (let i = 0; i < string.length; i++) {
-                view.setUint8(offset + i, string.charCodeAt(i));
-            }
-        }
-
-        async function speakText(text) {
-            if (!isAudioEnabled) return;
-
-            if (currentAudioPlayer) {
-                currentAudioPlayer.pause();
-                currentAudioPlayer = null;
-            }
-
-            if (audioCache[text]) {
-                currentAudioPlayer = new Audio(audioCache[text]);
-                currentAudioPlayer.play().catch(e => console.warn(e));
-                return;
-            }
-
-            // 1. 嘗試 Gemini API (若有 API key)
-            try {
-                const apiKey = ""; 
-                if (apiKey) {
-                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
-
-                    const payload = {
-                        contents: [{
-                            parts: [{ text: `請用標準國語/普通話讀出：${text}` }]
-                        }],
-                        generationConfig: {
-                            responseModalities: ["AUDIO"],
-                            speechConfig: {
-                                voiceConfig: {
-                                    prebuiltVoiceConfig: { voiceName: "Kore" }
-                                }
-                            }
-                        }
-                    };
-
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (response.ok) {
-                        const result = await response.json();
-                        const part = result?.candidates?.[0]?.content?.parts?.[0];
-                        const audioData = part?.inlineData?.data;
-                        const mimeType = part?.inlineData?.mimeType || "audio/L16;rate=24000";
-
-                        if (audioData) {
-                            let sampleRate = 24000;
-                            const match = mimeType.match(/rate=(\d+)/);
-                            if (match && match[1]) sampleRate = parseInt(match[1], 10);
-                            
-                            const pcmData = base64ToArrayBuffer(audioData);
-                            const pcm16 = new Int16Array(pcmData);
-                            const wavBlob = pcmToWav(pcm16, sampleRate);
-                            const audioUrl = URL.createObjectURL(wavBlob);
-
-                            audioCache[text] = audioUrl;
-                            currentAudioPlayer = new Audio(audioUrl);
-                            currentAudioPlayer.play();
-                            return;
-                        }
-                    }
-                }
-            } catch (err) {}
-
-            // 2. 嘗試 Google 國語/普通話語音接口 (適合 GitHub Pages，無需 API Key，支援長句)
-            try {
-                const googleMandarinUrl = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=zh-CN&client=tw-ob`;
-                currentAudioPlayer = new Audio(googleMandarinUrl);
-                await currentAudioPlayer.play();
-                audioCache[text] = googleMandarinUrl;
-                return;
             } catch (e) {
-                // 3. 次要備用：有道語音
-                try {
-                    const onlineMandarinUrl = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text)}&type=1`;
-                    currentAudioPlayer = new Audio(onlineMandarinUrl);
-                    await currentAudioPlayer.play();
-                    return;
-                } catch (err2) {
-                    // 4. 最終備用：iPad / Web Speech API (已優化 iOS 國語聲線選取)
-                    speakTextWebSpeechFallback(text);
-                }
+                console.warn('Audio playback error:', e);
             }
+        }
+
+        function speakText(text) {
+            if (!isAudioEnabled) return;
+            unlockAudioOnIOS();
+            speakTextWebSpeechFallback(text);
         }
 
         function speakTextWebSpeechFallback(text) {
             const synth = window.speechSynthesis;
             if (!synth) return;
+
             synth.cancel();
-
-            const voices = synth.getVoices() || [];
-            
-            // 嚴格篩選 iPad/iOS 上的國語/普通話聲線，排除廣東話 (Sin-Ji 等)
-            let mandarinVoice = voices.find(v => {
-                const lang = (v.lang || '').toLowerCase();
-                const name = (v.name || '').toLowerCase();
-                const isCanto = lang.includes('hk') || lang.includes('yue') || name.includes('cantonese') || name.includes('sin-ji') || name.includes('sinji') || name.includes('粵語') || name.includes('廣東話');
-                const isMandarin = lang.includes('zh-cn') || lang.includes('zh-tw') || lang.includes('zh-sg') || lang.includes('zh-cmn') || name.includes('putonghua') || name.includes('mandarin') || name.includes('國語') || name.includes('ting-ting') || name.includes('mei-jia') || name.includes('lili') || name.includes('yushu');
-                return !isCanto && isMandarin;
-            });
-
-            // 若未精準匹配，則選取任意非廣東話的中文聲線
-            if (!mandarinVoice) {
-                mandarinVoice = voices.find(v => {
-                    const lang = (v.lang || '').toLowerCase();
-                    const name = (v.name || '').toLowerCase();
-                    const isCanto = lang.includes('hk') || lang.includes('yue') || name.includes('cantonese') || name.includes('sin-ji') || name.includes('sinji') || name.includes('粵語') || name.includes('廣東話');
-                    return !isCanto && lang.startsWith('zh');
-                });
-            }
 
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = 'zh-CN';
-            if (mandarinVoice) {
-                utterance.voice = mandarinVoice;
-            }
             utterance.rate = 0.85;
+
+            const voices = synth.getVoices() || [];
+            if (voices.length > 0) {
+                // 精確篩選 iPad/iOS 普通話聲線（排除廣東話）
+                let mandarinVoice = voices.find(v => {
+                    const lang = (v.lang || '').toLowerCase();
+                    const name = (v.name || '').toLowerCase();
+                    const isCanto = lang.includes('hk') || lang.includes('yue') || name.includes('cantonese') || name.includes('sin-ji') || name.includes('sinji') || name.includes('粵語') || name.includes('廣東話');
+                    const isMandarin = lang.includes('zh-cn') || lang.includes('zh-tw') || lang.includes('zh-sg') || lang.includes('zh-cmn') || name.includes('putonghua') || name.includes('mandarin') || name.includes('國語') || name.includes('ting-ting') || name.includes('tingting') || name.includes('mei-jia') || name.includes('lili') || name.includes('yushu');
+                    return !isCanto && isMandarin;
+                });
+
+                if (!mandarinVoice) {
+                    mandarinVoice = voices.find(v => {
+                        const lang = (v.lang || '').toLowerCase();
+                        const name = (v.name || '').toLowerCase();
+                        const isCanto = lang.includes('hk') || lang.includes('yue') || name.includes('cantonese') || name.includes('sin-ji') || name.includes('sinji') || name.includes('粵語') || name.includes('廣東話');
+                        return !isCanto && lang.startsWith('zh');
+                    });
+                }
+
+                if (mandarinVoice) {
+                    utterance.voice = mandarinVoice;
+                }
+            }
+
             synth.speak(utterance);
         }
 
@@ -469,7 +376,6 @@
             } else {
                 soundIcon.className = 'fa-solid fa-volume-xmark';
                 soundText.innerText = '普通話發音：靜音';
-                if (currentAudioPlayer) currentAudioPlayer.pause();
                 if (window.speechSynthesis) window.speechSynthesis.cancel();
             }
         }
@@ -765,6 +671,10 @@
                     };
                 }
             }
+
+            // 監聽 iPad 螢幕首次點擊，解鎖聲音
+            document.addEventListener('touchstart', unlockAudioOnIOS, { once: true });
+            document.addEventListener('click', unlockAudioOnIOS, { once: true });
         };
     </script>
 </body>
